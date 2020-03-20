@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<link rel="styleSheet" href="../resources/css/BmiCalc.css?0320-1448">
+	<title>BMI Calculator by Vue.js</title>
+</head>
+<body>
+	<div id="app">
+		<dl>
+			<dt>名前:</dt>
+			<dd>
+				<input type="text" v-model="name" maxlength='10'>
+			</dd>
+			<dt>身長(m):</dt>
+			<dd>
+				<input type="number" v-model.number="height" step="0.01" min="0" max="9.99">
+			</dd>
+			<dt>体重(kg):</dt>
+			<dd>
+				<input type="number" v-model.number="weight" step="0.1" min="0" max="999.99">
+			<dd>
+			<dt>計算</dt>
+			<dd>
+				<button v-on:click="calcuration" v-on:click.right.prevent="">BMI計算</button>
+			</dd>
+		</dl>
+		<p>名前: {{name}}</p>
+		<p class="bmiStyle">BMI : {{ bmi }}</p>
+	</div>
+	<script type="text/javascript" src="../resources/js/vue.js"></script>
+	<script type="text/javascript" src="../resources/js/BmiCalc.js"></script>
+</body>
+</html>
