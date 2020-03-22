@@ -23,13 +23,15 @@
 			<dd>
 			<dt>計算</dt>
 			<dd>
-				<button v-on:click="calcuration" v-on:click.right.prevent="">BMI計算</button>
+				<button v-on:click="calcBmi()" v-on:click.right.prevent="">BMI計算</button>
 			</dd>
 		</dl>
 		<p>名前: {{name}}</p>
+		<p>身長: {{cmHeight}} cm</p>
+		<p>体重: {{weight}} kg</p>
 		<p class="bmiStyle">BMI : {{ bmi }}</p>
 	</div>
 	<script type="text/javascript" src="../resources/js/vue.js"></script>
-	<script type="text/javascript" src="../resources/js/BmiCalc.js"></script>
+	<script type="text/javascript" src="../resources/js/BmiCalc.js?0320-1615"></script>
 </body>
 </html>

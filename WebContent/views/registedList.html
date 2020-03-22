@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Registed List</title>
+	<meta charset="UTF-8">
+	<title>Registed List</title>
 </head>
 <body>
-	登録されている情報はありません
+	<div id="app">
+		<ul>
+			<li v-for="item in list" v-bind:key="item.id">
+				名前:{{item.name}}, 身長:{{item.height | cmHeight}} cm, 体重:{{item.weight}},BMI:{{BmiCalc(item.height,item.weight) | BmiRound(10)}}
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="../resources/js/vue.js"></script>
+	<script type="text/javascript" src="../resources/js/BmiList.js?0322-0000"></script>
 </body>
 </html>
